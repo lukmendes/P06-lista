@@ -14,5 +14,7 @@ public class Quest02 {
         } else {
             System.out.println("Este número é impar.");
         }
+
+        scan.close();
     }
 }

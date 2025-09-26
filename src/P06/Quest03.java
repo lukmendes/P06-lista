@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Quest03 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int numberC = 0;
+        int numberC;
 
         System.out.println("Digite o primeiro número: ");
         int numberA = scan.nextInt();
