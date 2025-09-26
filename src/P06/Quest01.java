@@ -1,4 +1,37 @@
 package P06;
 
+import java.util.Scanner;
+
 public class Quest01 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String message;
+
+        System.out.println("Digite o seu nome: ");
+        String name = scan.nextLine();
+        System.out.println("Digite o seu sexo: ");
+        String sex = scan.next();
+        System.out.println("Digite o seu estado civil: ");
+        String civil = scan.next();
+
+        if (sex.equals("F") && civil.equals("Casada")) {
+            System.out.println("Digite o tempo de casamento em anos: ");
+            int years = scan.nextInt();
+            message = """
+                    Seu nome é: %s;
+                    Seu sexo é: %s;
+                    Seu estado civil é: %s;
+                    O tempo do seu casamento é: %d;
+                    """.formatted(name, sex, civil, years);
+        } else {
+            message = """
+                    Seu nome é: %s;
+                    Seu sexo é: %s;
+                    Seu estado civil é: %s;
+                    """.formatted(name, sex, civil);
+        }
+        System.out.println(message);
+
+        scan.close();
+    }
 }
